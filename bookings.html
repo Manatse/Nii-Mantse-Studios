@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book a Session — Nii Mantse Studios</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts (same as portraits page) -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --beige: #f5f1eb;
+  --dark: #1a1a1a;
+  --muted: #777;
+  --accent: #c2a36b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--beige);
+  color: var(--dark);
+  line-height: 1.73;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 8%;
+}
+
+.booking-box {
+  max-width: 680px;
+  width: 100%;
+  background: #fff;
+  padding: 3.5rem;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.tagline {
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.package-details {
+  margin-bottom: 2.5rem;
+  color: var(--muted);
+}
+
+label {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-top: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+button {
+  margin-top: 2.5rem;
+  width: 100%;
+  padding: 16px;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.note {
+  margin-top: 1.5rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  section { padding: 4rem 6%; }
+  h1 { font-size: 2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <div class="booking-box">
+    <h1>Book Your Session</h1>
+    <p class="tagline">Beyond the Ordinary</p>
+
+    <div class="package-details" id="packageDetails"></div>
+
+    <form id="bookingForm">
+      <label>Full Name
+        <input type="text" id="name" required>
+      </label>
+
+      <label>Phone Number
+        <input type="tel" id="phone" required>
+      </label>
+
+      <label>Email Address
+        <input type="email" id="email">
+      </label>
+
+      <label>Preferred Session Date
+        <input type="date" id="date" required>
+      </label>
+
+      <button type="submit">Send Booking Request</button>
+    </form>
+
+    <p class="note">
+      A 70% deposit is required to secure your date.
+    </p>
+  </div>
+</section>
+
+<script>
+// =====================
+// PACKAGE + DEPOSIT LOGIC
+// =====================
+const params = new URLSearchParams(window.location.search);
+const packageName = params.get('package');
+const price = parseFloat(params.get('price'));
+const deposit = price * 0.7;
+
+document.getElementById('packageDetails').innerHTML = `
+  <strong>Package:</strong> ${packageName}<br>
+  <strong>Total Price:</strong> ₵${price.toFixed(2)}<br>
+  <strong>Required Deposit (70%):</strong> ₵${deposit.toFixed(2)}
+`;
+
+// =====================
+// DISABLED / BOOKED DATES
+// =====================
+// Add booked dates here (YYYY-MM-DD)
+const bookedDates = [
+  "2026-01-10",
+  "2026-01-15",
+  "2026-01-22"
+];
+
+const dateInput = document.getElementById('date');
+dateInput.addEventListener('input', () => {
+  if (bookedDates.includes(dateInput.value)) {
+    alert("This date is already booked. Please select another date.");
+    dateInput.value = "";
+  }
+});
+
+// =====================
+// WHATSAPP AUTO MESSAGE
+// =====================
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const email = document.getElementById('email').value;
+  const date = document.getElementById('date').value;
+
+  const message = `
+Hello Nii Mantse Studios,
+
+My name is ${name}.
+I would like to book the *${packageName}* package.
+
+📅 Preferred Date: ${date}
+💰 Total Price: ₵${price.toFixed(2)}
+🔒 70% Deposit: ₵${deposit.toFixed(2)}
+
+Phone: ${phone}
+Email: ${email}
+
+Thank you.
+  `;
+
+  const whatsappNumber = "233244261271";
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+});
+</script>
+
+</body>
+</html>

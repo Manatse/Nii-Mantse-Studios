@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nii Mantse Studios | Funeral Packages 2026</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
+    }
+
+    a {
+      color: #caa56a;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 80px 10%;
+      border-bottom: 1px solid #222;
+    }
+
+    /* HERO / SLIDER */
+    .hero {
+      position: relative;
+      height: 450px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+      height: 100%;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #f5f5f5;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.8rem;
+      color: #caa56a;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      border: 1px solid #caa56a;
+      color: #caa56a;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #caa56a;
+      color: #000;
+    }
+
+    /* Slider arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #caa56a;
+      background: rgba(0,0,0,0.4);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+
+    .arrow:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    /* Slider dots */
+    .dots {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #caa56a;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .dot.active {
+      opacity: 1;
+    }
+
+    /* PACKAGES */
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .package {
+      background: #161616;
+      padding: 20px;
+      border: 1px solid #222;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .package:hover {
+      border-color: #caa56a;
+    }
+
+    .package img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .package h3 {
+      margin-top: 0;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      color: #caa56a;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10%;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 6%;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero {
+        height: 300px;
+      }
+      .slide {
+        height: 300px;
+      }
+      .package img {
+        height: 150px;
+      }
+      .arrow {
+        font-size: 1.5rem;
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO / SLIDER -->
+  <section class="hero">
+    <div class="slides">
+      <div class="slide" style="background-image:url('images/slide1.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide2.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide3.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide4.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide5.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide6.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide7.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide8.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide9.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide10.jpg')"></div>
+    </div>
+    <div class="hero-overlay">
+      <p class="tagline">Beyond The Ordinary</p>
+      <h1>Nii Mantse Studios</h1>
+      <p>Let’s Create a Heartfelt Farewell Story</p>
+      <a href="https://linktr.ee/nii.mantse" class="btn">Get In Touch</a>
+    </div>
+
+    <!-- Navigation -->
+    <button class="arrow arrow-left">&#10094;</button>
+    <button class="arrow arrow-right">&#10095;</button>
+
+    <!-- Pagination dots -->
+    <div class="dots"></div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section>
+    <h2>Introduction</h2>
+    <p>
+      Cherishing the final memories of loved ones who have passed away is profoundly important.
+      These memories serve as a lasting connection, offering comfort, strength, and remembrance
+      of the love and joy shared.
+    </p>
+  </section>
+
+  <!-- WHY FUNERALS -->
+  <section>
+    <h2>Why Funeral Coverage?</h2>
+    <p>
+      Investing in funeral coverage provides peace of mind and emotional security for families.
+      It removes financial stress during difficult moments, allowing loved ones to focus on
+      honoring and celebrating a meaningful legacy.
+    </p>
+  </section>
+
+  <!-- PACKAGES -->
+  <section>
+    <h2>Funeral Packages</h2>
+
+    <div class="packages">
+      <a href="bookings.html" class="package">
+        <img src="images/package1.jpg" alt="Essential Memories">
+        <h3>Essential Memories</h3>
+        <ul>
+          <li>12 hours video coverage (Saturday & Sunday)</li>
+          <li>400+ edited photos</li>
+          <li>Video trailer (Saturday)</li>
+          <li>Online gallery & download</li>
+          <li>Photobook</li>
+          <li>Pendrive</li>
+        </ul>
+        <p class="price">¢5,000</p>
+      </a>
+
+      <a href="bookings.html" class="package">
+        <img src="images/package2.jpg" alt="Celebration of Life">
+        <h3>Celebration of Life</h3>
+        <ul>
+          <li>12 hours video coverage (Saturday & Sunday)</li>
+          <li>Video trailer (Saturday)</li>
+          <li>Online gallery & download</li>
+          <li>Pendrive</li>
+        </ul>
+        <p class="price">¢3,599</p>
+      </a>
+
+      <a href="bookings.html" class="package">
+        <img src="images/package3.jpg" alt="Legacy Keepsafe">
+        <h3>Legacy Keepsafe</h3>
+        <ul>
+          <li>12 hours video coverage (Saturday)</li>
+          <li>200+ edited photos</li>
+          <li>Trailer (Saturday)</li>
+          <li>Online gallery</li>
+        </ul>
+        <p class="price">¢2,499</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact Information</h2>
+    <p><strong>Phone:</strong> +233 243 261 271</p>
+    <p><strong>WhatsApp:</strong> 0243 26 1271</p>
+    <p><strong>Instagram:</strong> @niimantsestudios</p>
+    <p><strong>Email:</strong> mantseshotit@gmail.com | tawiahgardiner@gmail.com</p>
+  </section>
+
+  <!-- TERMS -->
+  <section>
+    <h2>Terms & Conditions</h2>
+    <p>
+      A non-refundable 30% deposit is required to secure bookings.
+      Full payment is due before or immediately after the service.
+      Cancellations within 48 hours result in loss of deposit.
+    </p>
+    <p>
+      In the rare event of file loss, clients are eligible for a full refund.
+      Refunds apply strictly to lost files and do not include reshoots unless agreed.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Nii Mantse Studios — Beyond The Ordinary</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideCount = slides.children.length;
+    let index = 0;
+    let interval;
+
+    const dotsContainer = document.querySelector('.dots');
+
+    // Create dots
+    for(let i=0; i<slideCount; i++){
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if(i===0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        index = i;
+        updateSlider();
+        resetInterval();
+      });
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlider(){
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(d => d.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    document.querySelector('.arrow-left').addEventListener('click', () => {
+      index = index > 0 ? index - 1 : slideCount - 1;
+      updateSlider();
+      resetInterval();
+    });
+
+    document.querySelector('.arrow-right').addEventListener('click', () => {
+      index = index < slideCount - 1 ? index + 1 : 0;
+      updateSlider();
+      resetInterval();
+    });
+
+    function autoSlide(){
+      index = (index + 1) % slideCount;
+      updateSlider();
+    }
+
+    function resetInterval(){
+      clearInterval(interval);
+      interval = setInterval(autoSlide, 4000);
+    }
+
+    interval = setInterval(autoSlide, 4000);
+  </script>
+
+</body>
+</html>

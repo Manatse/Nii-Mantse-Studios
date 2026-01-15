@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nii Mantse Studios — Portraits</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --beige: #f5f1eb;
+  --dark: #1a1a1a;
+  --muted: #777;
+  --accent: #c2a36b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--beige);
+  color: var(--dark);
+  line-height: 1.73;
+}
+
+section {
+  padding: 5rem 8%;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+
+p {
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover,
+.card-link:visited,
+.card-link:active,
+.card-link:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero > div {
+  margin: 0 auto;
+}
+
+.tagline {
+  color: var(--accent);
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin: 2rem auto;
+}
+
+/* IMAGE GRID */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform .6s ease, box-shadow .6s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* PRICING GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* PRICE CARD IMAGE EFFECTS */
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0%);
+}
+
+/* ART-DIRECTED CROPS */
+.card.prestige img {
+  object-position: center top;
+}
+
+.card.luxe img {
+  object-position: center center;
+}
+
+.card.family img {
+  object-position: center bottom;
+}
+
+.card.pathfinder img {
+  object-position: center top;
+}
+
+.card.voyager img {
+  object-position: center center;
+}
+
+.card.cruiser img {
+  object-position: center bottom;
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card h3 {
+  margin-bottom: .5rem;
+}
+
+.price {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* CONTACT */
+.contact a {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  padding: 3rem 8%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  section { padding: 4rem 6%; }
+  h1 { font-size: 2.3rem; }
+  h2 { font-size: 1.8rem; }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid img {
+    height: 320px;
+  }
+
+  /* Taller price images on mobile */
+  .card img {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* TOUCH DEVICES */
+@media (hover: none) {
+  .card:hover img {
+    transform: scale(1.03);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Nii Mantse Studios</h1>
+    <p class="tagline">Beyond the Ordinary</p>
+    <div class="divider"></div>
+    <p>We tell stories and create lasting memories through refined portrait photography.</p>
+
+    <div class="image-grid">
+      <img src="assets/hero-1.jpg">
+      <img src="assets/hero-2.jpg">
+      <img src="assets/hero-3.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- WHY PORTRAITS -->
+<section>
+  <h2>The Essence of Portrait Photography</h2>
+  <p>Portrait photography captures emotion, personality, and presence.</p>
+
+  <div class="image-grid">
+    <img src="assets/why-1.jpg">
+    <img src="assets/why-2.jpg">
+    <img src="assets/why-3.jpg">
+  </div>
+</section>
+
+<!-- STUDIO PRICING -->
+<section>
+  <h2>Studio Portrait Rates</h2>
+
+<div class="grid">
+
+<a href="bookings.html?package=Prestige%20Portrait%20Xperience&price=400" class="card-link">
+  <div class="card prestige">
+    <img src="assets/price-prestige.jpg">
+    <div class="card-content">
+      <h3>Prestige Portrait X’perience</h3>
+      <p>35 mins · 5 retouched photos · 1 outfit</p>
+      <p class="price">₵400.00</p>
+    </div>
+  </div>
+</a>
+
+<a href="bookings.html?package=Luxe%20Signature%20Session&price=550" class="card-link">
+  <div class="card luxe">
+    <img src="assets/price-luxe.jpg">
+    <div class="card-content">
+      <h3>Luxe Signature Session</h3>
+      <p>1 hour · 9 retouched photos · 2–3 outfits</p>
+      <p class="price">₵550.00</p>
+    </div>
+  </div>
+</a>
+
+<a href="bookings.html?package=Elite%20Family%20X&price=850" class="card-link">
+  <div class="card family">
+    <img src="assets/price-family.jpg">
+    <div class="card-content">
+      <h3>Elite Family X</h3>
+      <p>2 hours · 15 retouched photos · Frame included</p>
+      <p class="price">₵850.00</p>
+    </div>
+  </div>
+</a>
+
+</div>
+
+</section>
+
+<!-- OUTDOOR PRICING -->
+<section>
+  <h2>Outdoor Portrait Sessions</h2>
+
+  <div class="image-grid">
+    <img src="assets/out1.jpg">
+    <img src="assets/out2.jpg">
+    <img src="assets/out3.jpg">
+  </div>
+ <div class="grid">
+
+<a href="bookings.html?package=Pathfinder&price=450" class="card-link">
+  <div class="card pathfinder">
+    <img src="assets/price-pathfinder.jpg">
+    <div class="card-content">
+      <h3>Pathfinder</h3>
+      <p>60 mins · 5 edited photos · 1 outfit</p>
+      <p class="price">₵450.00</p>
+    </div>
+  </div>
+</a>
+
+<a href="bookings.html?package=Voyager&price=600" class="card-link">
+  <div class="card voyager">
+    <img src="assets/price-voyager.jpg">
+    <div class="card-content">
+      <h3>Voyager</h3>
+      <p>90 mins · 9 edited photos · 2 outfits</p>
+      <p class="price">₵600.00</p>
+    </div>
+  </div>
+</a>
+
+<a href="bookings.html?package=Cruiser&price=1000" class="card-link">
+  <div class="card cruiser">
+    <img src="assets/price-cruiser.jpg">
+    <div class="card-content">
+      <h3>Cruiser</h3>
+      <p>120 mins · 15 edited photos · 2 locations</p>
+      <p class="price">₵1,000.00</p>
+    </div>
+  </div>
+</a>
+
+</div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Let’s Get in Touch</h2>
+  <p>
+    📞 +233 244 261 271<br>
+    📧 mantseshotit@gmail.com<br>
+    📧 tawiahgardiner@gmail.com<br>
+    📸 Instagram: @niimantsestudios
+  </p>
+  <a href="https://linktr.ee/nii.mantse" target="_blank">Visit Linktree →</a>
+</section>
+
+<footer>
+  © Nii Mantse Studios — Beyond the Ordinary
+</footer>
+
+</body>
+</html>
